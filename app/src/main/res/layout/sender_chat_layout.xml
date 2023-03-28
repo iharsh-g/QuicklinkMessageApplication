@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:padding="2dp">
+
+        <RelativeLayout
+            android:id="@+id/wholeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_for_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:minWidth="60dp"
+                android:background="@drawable/sender_chat_bubble"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/sender_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:minWidth="60dp"
+                    android:padding="7dp"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:text="S" />
+
+                <TextView
+                    android:id="@+id/time_of_message1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sender_message"
+                    android:layout_alignEnd="@id/sender_message"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="3dp"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#434343"
+                    android:textSize="10sp"
+                    tools:text="12 Feb, 20:09:PM" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_image"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginStart="55dp"
+                android:backgroundTint="#c7e3ff"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:layout_centerVertical="true"
+                        android:transitionName="example_transition"
+                        android:src="@drawable/ic_launcher_background" />
+
+                    <TextView
+                        android:id="@+id/time_of_message2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="5dp"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="7dp"
+                        android:paddingBottom="3dp"
+                        tools:text="20:09"
+                        android:textColor="#434343"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

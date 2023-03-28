@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foreground="@drawable/foreground_design"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chat_bg" />
+
+        <TextView
+            android:id="@+id/save_your_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:fontFamily="baskerville"
+            android:text="Set Profile"
+            android:textColor="#7694ff"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/iv_get_user_image_in_iv"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_below="@id/save_your_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/defaultprofile"
+            app:civ_border_color="#000000"
+            app:civ_border_width="4dp"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="10dp"
+            app:civ_shadow_color="#FFFFFF"  />
+
+        <EditText
+            android:id="@+id/et_get_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/iv_get_user_image_in_iv"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="70dp"
+            android:hint="Enter Your name Here"
+            android:inputType="textCapWords"
+            android:textColor="@color/white"
+            android:textColorHint="#E4E4E4" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/save_profile"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/et_get_user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:backgroundTint="#6765ff"
+            app:cardCornerRadius="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Save Profile"
+                android:textColor="@color/white" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/proceed_profile"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/et_get_user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:backgroundTint="#6765ff"
+            android:visibility="gone"
+            app:cardCornerRadius="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Proceed"
+                android:textColor="@color/white" />
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/pb_set_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/save_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+</layout>

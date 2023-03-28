@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/foreground_design"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chat_bg" />
+
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Enter the OTP You Received"
+        android:textColor="#D6D5D5"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_get_otp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_heading"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:hint="Enter the OTP here..."
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="#D6D5D5" />
+
+    <TextView
+        android:id="@+id/tv_change_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_get_otp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Didn't receive? Change Your Number"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/verify_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv_change_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:backgroundTint="#6765ff"
+        app:cardCornerRadius="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Verify OTP"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/pb_opt_auth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verify_otp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:visibility="invisible" />
+
+    <!--    </RelativeLayout>-->
+
+
+</RelativeLayout>

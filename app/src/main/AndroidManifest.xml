@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.example.chatapp">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChatApp">
+        <activity
+            android:name=".userverification.SignInActivity"
+            android:exported="true" />
+        <activity
+            android:name=".userverification.RegistrationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".userverification.MobileLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".specificChat.CameraActivity"
+            android:exported="true" />
+        <activity
+            android:name=".specificChat.ImagePreviewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".specificChat.GalleryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".specificChat.SpecificChat"
+            android:exported="true" />
+        <activity
+            android:name=".profile.UpdateProfile"
+            android:exported="true" />
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".userverification.SetProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".userverification.OtpAuthenticationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".userverification.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
